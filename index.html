@@ -5,18 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Your Name – Web Designer & Developer</title>
   <style>
-    /* Reset and base styles */
-    * {
+    /* Base Reset */
+    *, *::before, *::after {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
     body {
-      font-family: 'Helvetica Neue', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
       color: #333;
-      background-color: #fff;
+      background-color: #f4f4f4;
+    }
+
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     .container {
@@ -28,37 +37,39 @@
 
     /* Header */
     header {
-      background-color: #f8f8f8;
+      background-color: #fff;
       padding: 1rem 0;
       border-bottom: 1px solid #eaeaea;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     header h1 {
-      font-size: 1.5rem;
+      font-size: 2rem;
+      text-align: center;
     }
 
     nav {
       margin-top: 0.5rem;
+      text-align: center;
     }
 
     nav a {
-      margin-right: 1rem;
-      text-decoration: none;
-      color: #333;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
+      margin: 0 1rem;
+      font-weight: bold;
     }
 
     /* Hero Section */
     #hero {
       text-align: center;
       padding: 4rem 0;
+      background: linear-gradient(to right, #007acc, #005fa3);
+      color: #fff;
     }
 
     #hero h2 {
-      font-size: 2rem;
+      font-size: 2.5rem;
       margin-bottom: 1rem;
     }
 
@@ -70,45 +81,65 @@
     .cta-button {
       display: inline-block;
       padding: 0.75rem 1.5rem;
-      background-color: #007acc;
-      color: #fff;
+      background-color: #fff;
+      color: #007acc;
       text-decoration: none;
       border-radius: 4px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
     }
 
     .cta-button:hover {
-      background-color: #005fa3;
+      background-color: #eaeaea;
     }
 
     /* Sections */
     section {
       padding: 2rem 0;
+      background-color: #fff;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
     h3 {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       margin-bottom: 1rem;
+      text-align: center;
+      color: #007acc;
     }
 
     .project-list,
     .blog-list {
       list-style: none;
+      padding: 0;
     }
 
     .project-list li,
     .blog-list li {
       margin-bottom: 1.5rem;
+      padding: 1rem;
+      border-left: 4px solid #007acc;
+      background-color: #f9f9f9;
+    }
+
+    .project-list li h4,
+    .blog-list li h4 {
+      margin-bottom: 0.5rem;
     }
 
     /* Contact Form */
     form {
       display: flex;
       flex-direction: column;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
     form label {
       margin-top: 1rem;
       margin-bottom: 0.5rem;
+      font-weight: bold;
     }
 
     form input,
@@ -116,6 +147,7 @@
       padding: 0.5rem;
       border: 1px solid #ccc;
       border-radius: 4px;
+      font-size: 1rem;
     }
 
     form button {
@@ -125,6 +157,9 @@
       color: #fff;
       border: none;
       border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
     }
 
     form button:hover {
@@ -133,10 +168,31 @@
 
     /* Footer */
     footer {
-      background-color: #f8f8f8;
+      background-color: #fff;
       text-align: center;
       padding: 1rem 0;
       border-top: 1px solid #eaeaea;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      #hero h2 {
+        font-size: 2rem;
+      }
+
+      .cta-button {
+        padding: 0.5rem 1rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
@@ -154,15 +210,17 @@
   </header>
 
   <main>
-    <section id="hero" class="container">
-      <h2>Freelance Web Designer & Developer</h2>
-      <p>Creating meaningful, results-driven websites that are a pleasure to use.</p>
-      <a href="#contact" class="cta-button">Let's Work Together</a>
+    <section id="hero">
+      <div class="container">
+        <h2>Freelance Web Designer & Developer</h2>
+        <p>Creating meaningful, results-driven websites that are a pleasure to use.</p>
+        <a href="#contact" class="cta-button">Let's Work Together</a>
+      </div>
     </section>
 
     <section id="about" class="container">
       <h3>About Me</h3>
-      <p>Brief introduction about your experience and skills.</p>
+      <p>I'm a passionate web designer and developer with experience in creating dynamic and responsive websites. My goal is to build user-friendly interfaces and bring ideas to life through code.</p>
     </section>
 
     <section id="projects" class="container">
@@ -170,7 +228,7 @@
       <ul class="project-list">
         <li>
           <h4>Project Title</h4>
-          <p>Short description of the project.</p>
+          <p>A brief description of the project, highlighting the technologies used and the problem it solves.</p>
         </li>
         <!-- Add more projects as needed -->
       </ul>
@@ -181,7 +239,7 @@
       <ul class="blog-list">
         <li>
           <h4>Blog Post Title</h4>
-          <p>Summary of the blog post.</p>
+          <p>A short summary of the blog post to entice readers to learn more.</p>
         </li>
         <!-- Add more blog posts as needed -->
       </ul>
@@ -197,7 +255,7 @@
         <input type="email" id="email" name="email" required />
 
         <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
+        <textarea id="message" name="message" rows="5" required></textarea>
 
         <button type="submit">Send Message</button>
       </form>
