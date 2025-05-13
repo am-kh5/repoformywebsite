@@ -1,11 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name – Web Designer & Developer</title>
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #fff;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+
+    /* Header */
+    header {
+      background-color: #f8f8f8;
+      padding: 1rem 0;
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    nav {
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      margin-right: 1rem;
+      text-decoration: none;
+      color: #333;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    #hero {
+      text-align: center;
+      padding: 4rem 0;
+    }
+
+    #hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    #hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #007acc;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .cta-button:hover {
+      background-color: #005fa3;
+    }
+
+    /* Sections */
+    section {
+      padding: 2rem 0;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-list,
+    .blog-list {
+      list-style: none;
+    }
+
+    .project-list li,
+    .blog-list li {
+      margin-bottom: 1.5rem;
+    }
+
+    /* Contact Form */
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    form label {
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    form input,
+    form textarea {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    form button {
+      margin-top: 1rem;
+      padding: 0.75rem;
+      background-color: #007acc;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+    }
+
+    form button:hover {
+      background-color: #005fa3;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #f8f8f8;
+      text-align: center;
+      padding: 1rem 0;
+      border-top: 1px solid #eaeaea;
+    }
+  </style>
 </head>
 <body>
-    <p>my website</p>
+  <header>
+    <div class="container">
+      <h1>Your Name</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="container">
+      <h2>Freelance Web Designer & Developer</h2>
+      <p>Creating meaningful, results-driven websites that are a pleasure to use.</p>
+      <a href="#contact" class="cta-button">Let's Work Together</a>
+    </section>
+
+    <section id="about" class="container">
+      <h3>About Me</h3>
+      <p>Brief introduction about your experience and skills.</p>
+    </section>
+
+    <section id="projects" class="container">
+      <h3>Featured Projects</h3>
+      <ul class="project-list">
+        <li>
+          <h4>Project Title</h4>
+          <p>Short description of the project.</p>
+        </li>
+        <!-- Add more projects as needed -->
+      </ul>
+    </section>
+
+    <section id="blog" class="container">
+      <h3>Latest Posts</h3>
+      <ul class="blog-list">
+        <li>
+          <h4>Blog Post Title</h4>
+          <p>Summary of the blog post.</p>
+        </li>
+        <!-- Add more blog posts as needed -->
+      </ul>
+    </section>
+
+    <section id="contact" class="container">
+      <h3>Contact Me</h3>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
